@@ -1,0 +1,7 @@
+services:
+  - docker
+
+script:
+  - make build
+  - make tag
+  - make test
