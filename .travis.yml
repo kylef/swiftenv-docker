@@ -5,3 +5,6 @@ script:
   - make build
   - make tag
   - make test
+
+after_success:
+  - ./.travis-push.sh
