@@ -1,5 +1,5 @@
 .PHONY: build
-build: 1/Dockerfile 1/swift3/Dockerfile
+build: 1
 
 .PHONY: tag
 tag: build
@@ -15,6 +15,9 @@ push: tag
 	docker push kylef/swiftenv:latest
 	docker push kylef/swiftenv:swift3
 	docker push kylef/swiftenv:build
+
+.PHONY: 1
+1: 1/Dockerfile 1/swift3/Dockerfile 1/build/Dockerfile
 
 .PHONY: 1/Dockerfile
 1/Dockerfile:
