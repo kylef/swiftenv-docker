@@ -6,6 +6,7 @@ tag: build
 	docker tag kylef/swiftenv:1 kylef/swiftenv:latest
 	docker tag kylef/swiftenv:1-swift3 kylef/swiftenv:swift3
 	docker tag kylef/swiftenv:1-build kylef/swiftenv:build
+	docker tag kylef/swiftenv:1-swift3 kylef/swiftenv:swift
 
 .PHONY: push
 push: tag
@@ -14,6 +15,7 @@ push: tag
 	docker push kylef/swiftenv:1-build
 	docker push kylef/swiftenv:latest
 	docker push kylef/swiftenv:swift3
+	docker push kylef/swiftenv:swift
 	docker push kylef/swiftenv:build
 
 .PHONY: 1
